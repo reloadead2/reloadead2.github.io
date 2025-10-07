@@ -4,7 +4,7 @@ body {
   color: #000;
   margin: 0.3rem;
   padding: 0.3rem;
-  font-size: 1rem; /* readable on phones */
+  font-size: 1rem;
 }
 
 a {
@@ -49,7 +49,7 @@ tr:hover td {
 
 .cover {
   width: 100%;
-  max-width: 120px; /* reasonable for mobile */
+  max-width: 120px;
   height: auto;
   margin-right: 0.5rem;
   margin-bottom: 0.3rem;
@@ -75,4 +75,42 @@ tr:hover td {
 
 .nav-links {
   margin-top: 0.8rem;
-  font-size: 0.95
+  font-size: 0.95rem;
+  border-top: 1px solid #bbb;
+  padding-top: 0.4rem;
+}
+
+.nav-links a {
+  margin-right: 1rem;
+}
+
+/* Apache-style footer */
+.footer {
+  margin-top: 1rem;
+  padding-top: 0.5rem;
+  font-size: 0.75rem;
+  color: #555;
+  border-top: 1px solid #aaa;
+  font-family: monospace;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Mobile adjustments */
+@media (max-width: 480px) {
+  body {
+    font-size: 1rem;
+  }
+  .novel-details {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .cover {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+  .footer {
+    flex-direction: column;
+    text-align: left;
+  }
+}
