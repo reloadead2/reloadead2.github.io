@@ -2,8 +2,9 @@ body {
   font-family: monospace;
   background: #fff;
   color: #000;
-  margin: 0;
-  padding: 0.5rem;
+  margin: 0.3rem;
+  padding: 0.3rem;
+  font-size: 1rem; /* readable on phones */
 }
 
 a {
@@ -18,7 +19,7 @@ a:hover {
 table {
   width: 100%;
   border-collapse: collapse;
-  table-layout: fixed; /* makes table always fit screen */
+  table-layout: auto;
   word-wrap: break-word;
 }
 
@@ -42,14 +43,16 @@ tr:hover td {
 }
 
 .info {
-  margin-bottom: 1rem;
-  font-size: 0.9rem;
+  margin-bottom: 0.8rem;
+  font-size: 0.95rem;
 }
 
 .cover {
-  width: 120px;
+  width: 100%;
+  max-width: 120px; /* reasonable for mobile */
   height: auto;
   margin-right: 0.5rem;
+  margin-bottom: 0.3rem;
   border: 1px solid #ccc;
 }
 
@@ -61,7 +64,7 @@ tr:hover td {
 
 .novel-text {
   flex: 1;
-  min-width: 0; /* prevents overflow */
+  min-width: 0;
 }
 
 .chapter {
@@ -71,21 +74,5 @@ tr:hover td {
 }
 
 .nav-links {
-  margin-top: 1rem;
-  font-size: 0.9rem;
-  border-top: 1px solid #bbb;
-  padding-top: 0.4rem;
-}
-
-.nav-links a {
-  margin-right: 1rem;
-}
-
-.footer {
-  margin-top: 1rem;
-  border-top: 1px solid #aaa;
-  padding: 0.3rem;
-  font-size: 0.85rem;
-  color: #555;
-  text-align: center;
-}
+  margin-top: 0.8rem;
+  font-size: 0.95
